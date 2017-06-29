@@ -1,0 +1,30 @@
+*{margin:0;padding:0;list-style:none}
+.header{position:fixed;top:0;right:0;left:0;z-index:100;height:50px;background:#fff;font-size:20px;font-weight:bold;line-height:50px;text-align:center}
+
+.filter_list{overflow:hidden;margin:50px 0 2px 0}
+.filter_list .filter_item{float:left;width:25%;color:#fff;line-height:50px;text-align:center}
+.filter_list .filter_item:nth-child(1){background:#25f0e1}
+.filter_list .filter_item:nth-child(1) .item_btn.active{background:#fff;color:#25f0e1}
+.filter_list .filter_item:nth-child(2){background:#2db8d9}
+.filter_list .filter_item:nth-child(2) .item_btn.active{background:#fff;color:#2db8d9}
+.filter_list .filter_item:nth-child(3){background:#2594f0}
+.filter_list .filter_item:nth-child(3) .item_btn.active{background:#fff;color:#2594f0}
+.filter_list .filter_item:nth-child(4){background:#245be5}
+.filter_list .filter_item:nth-child(4) .item_btn.active{background:#fff;color:#245be5}
+.filter_list .filter_item .item_btn{float:left;width:100%;border:0;background:none;outline:none}
+
+.photo_area{overflow:hidden}
+.photo_list{overflow:hidden;margin:-2px 0 0 -2px}
+.photo_list .photo_item{float:left;width:33.33%}
+.photo_list .photo_item .item{display:block;margin:2px 0 0 2px}
+.photo_list .photo_item .item img{width:100%}
+
+.detail_photo{position:fixed;top:50px;left:0;right:0;bottom:0;background:#fff}
+.detail_photo img{width:100%}
+
+.photo_date{text-align:center}
+.btn_area{overflow:hidden}
+.btn_area .btn_box:nth-child(1){float:left;}
+.btn_area .btn_box:nth-child(2){float:right;}
+.btn_area .btn_box .slide_btn{background:#337ab7;border:0;padding:0 10px;color:#fff;}
+.btn_area .close_btn{clear:both;width:100%;}

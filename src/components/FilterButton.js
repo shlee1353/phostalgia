@@ -1,25 +1,26 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../actions/visibilityFilter'
+import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-const FilterButton = ({ isActive, name, onClick }) => (
-  <button
-    type='button'
-    className={`btn ${isActive ? 'active' : ''}`}
-    onClick={onClick}
-  >
-    {name}
-  </button>
-);
+const filterButton = ({ isActive, name, onClick }) => {
+	return(
+		<li className="filter_item">
+			<button
+			    type='button'
+			    className={`item_btn ${isActive ? 'active' : ''}`}
+			    onClick={onClick}
+			>
+				{name}
+			</button>
+		</li>
+	)
+};
 
 const mapStateToProps = (state, ownProps) => ({
-  isActive: ownProps.filter === state.visibilityFilter
+	isActive: ownProps.filter === state.filter.currentFilter
 });
-
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => {
-    dispatch(setVisibilityFilter(ownProps.filter))
-  }
+	onClick: () => { dispatch(actions.filterCondition(ownProps.filter))}
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilterButton)
+export default connect(mapStateToProps, mapDispatchToProps)(filterButton)

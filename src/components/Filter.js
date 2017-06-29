@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react';
 import FilterButton from './FilterButton'
 
-const Filter = () => (
-  <div className='filter_area'>
-    <FilterButton filter='SHOW_ALL' name='All' />
-    <FilterButton filter='SHOW_SUNNY' name='Sunny' />
-    <FilterButton filter='SHOW_CLOUDY' name='Cloudy' />
-    <FilterButton filter='SHOW_RAINY' name='Rainy' />
-    <FilterButton filter='SHOW_SNOWY' name='Snowy' />
-  </div>
-);
+class Filter extends Component {
 
-export default Filter
+    render() {
+        return(
+            <ul className="filter_list">
+                 <FilterButton filter='sunny' name='sunny' />
+                 <FilterButton filter='cloudy' name='cloudy' />
+                 <FilterButton filter='rainy' name='rainy' />
+                 <FilterButton filter='snowy' name='snowy' />
+            </ul>
+        );
+    }
+}
+
+export default Filter;

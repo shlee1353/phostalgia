@@ -1,24 +1,5 @@
-# PHOSTALGIA
+Code for appendto.com post on moving from jQuery to React/Redux: Managing State with List Filtering Example  
+[https://craterlake-react-redux.herokuapp.com](https://craterlake-react-redux.herokuapp.com)
 
-## Getting started
+To deploy to heroku use the [create-react-app buildpack](https://github.com/mars/create-react-app-buildpack#usage)
 
-### Install packages
-`yarn install` or `npm install`
-
-### Start dev server
-`yarn start` or `npm start`  
-Runs the app in development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Build
-`yarn build` or `npm run build`  
-Builds the app for production to the `build` folder.
-
-
-## Stacks
-- boilerplate : create-react-app
-- frontend : react
-- backend : node / express
-- database : mongodb
-- build : react script
-- package : yarn, npm

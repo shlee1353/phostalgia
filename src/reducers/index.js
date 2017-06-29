@@ -1,16 +1,12 @@
-import { combineReducers } from 'redux'
-import visibilityFilter from './visibilityFilter'
-import photoDetail from './photoDetail'
-import loading from './loading'
-import imageUpload from './imageUpload'
-import photoOption from './photoOption'
+import {combineReducers} from 'redux';
+import filter from './filter';
+import detail from './detail';
+import weather from './weather';
 
-const reducers = combineReducers({
-	visibilityFilter,
-  photoDetail,
-  loading,
-  imageUpload,
-  photoOption
+const reducers = combineReducers ({
+	filter,
+	detail,
+	weather
 });
 
-export default reducers
+export default reducers;
