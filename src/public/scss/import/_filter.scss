@@ -1,0 +1,22 @@
+/* import/_filter.scss */
+
+.filter_area {
+  overflow: hidden;
+  padding: 30px 0;
+  text-align: center;
+  .btn {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300;
+    color: #a0a0a0;
+    outline: none;
+    transition: color 1s;
+  }
+  .btn + .btn {
+    margin-left: 36px;
+  }
+  .btn.active {
+    font-weight: 700;
+    color: #607d8b;
+  }
+}
