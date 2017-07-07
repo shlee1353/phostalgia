@@ -23,6 +23,13 @@ export const showDetail = (flag, key, len) => {
 	}
 }
 
+export const closeDetail = () => {
+	return {
+		type : types.CLOSEDETAIL,
+		flag : false
+	}
+}
+
 export const slidePhoto = (filter) => {
 	return {
 		type : types.SLIDEPHOTO,

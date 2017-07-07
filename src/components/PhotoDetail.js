@@ -52,7 +52,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    closeClick: () => { dispatch(actions.nextShowDetail())},
+    closeClick: () => { dispatch(actions.closeDetail())},
     handleSetWeather: (data) => { dispatch(actions.setWeather(data))}
 });
 

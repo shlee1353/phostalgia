@@ -32,6 +32,12 @@ export default function detail (state = initialState, action) {
                 selectedKey : update(state.selectedKey, {$set: action.key}),
                 photoLength : update(state.photoLength, {$set: action.len})
             }
+        case types.CLOSEDETAIL:
+            return {
+                showDetail : update(state.showDetail, {$set: action.flag}),
+                selectedKey : state.selectedKey,
+                photoLength : state.photoLength
+            }
         case types.SLIDEPHOTO:
             let count = slidePhoto(state, action)
             return {
