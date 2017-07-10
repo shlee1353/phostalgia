@@ -3,20 +3,12 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import * as actions from '../actions';
 import SlideButton from './SlideButton'
-const api_key = '98e5058d35e2ce15ce97704c1dd2088a';
-const api_url = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=' + api_key;
 
 class PhotoDetail extends Component {
-    // componentWillMount() {
-    //     var self = this;
-    //     axios.get(api_url)
-    //         .then(function(result){ 
-    //             self.props.handleSetWeather(result);
-    //         })
-    //         .catch((error) => {
-    //           console.log(error);
-    //         })
-    // }
+
+    componentDidMount() {
+        this.props.handleSetWeather()
+    }
 
     render() {
         const showDetail = () => {
@@ -24,7 +16,7 @@ class PhotoDetail extends Component {
             return (
                 <div>
                     <img src={photo.imgUrl} alt="" />
-                    <div className="photo_date">{photo.date}</div>
+                    <div className="photo_info">{photo.date}</div>
                     <div className="btn_area">
                         <SlideButton filter='prev' name='prev' />
                         <SlideButton filter='next' name='next' />
@@ -36,6 +28,8 @@ class PhotoDetail extends Component {
                         close
                         </button>
                     </div>
+                    <div className="photo_info">{this.props.currentCity}</div>
+                    <div className="photo_info">{this.props.currentWeather}</div>
                 </div>
             )
         }
@@ -47,13 +41,16 @@ class PhotoDetail extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-
-});
+const mapStateToProps = (state) => {
+    return {
+        currentCity: state.weather.currentCity,
+        currentWeather: state.weather.currentWeather
+    };
+};
 
 const mapDispatchToProps = (dispatch) => ({
     closeClick: () => { dispatch(actions.closeDetail())},
-    handleSetWeather: (data) => { dispatch(actions.setWeather(data))}
+    handleSetWeather: (data) => { dispatch(actions.getWeather())}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PhotoDetail)

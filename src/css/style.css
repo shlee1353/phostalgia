@@ -22,9 +22,9 @@
 .detail_photo{position:fixed;top:50px;left:0;right:0;bottom:0;background:#fff}
 .detail_photo img{width:100%}
 
-.photo_date{text-align:center}
+.photo_info{text-align:center}
 .btn_area{overflow:hidden}
-.btn_area .btn_box:nth-child(1){float:left;}
-.btn_area .btn_box:nth-child(2){float:right;}
-.btn_area .btn_box .slide_btn{background:#337ab7;border:0;padding:0 10px;color:#fff;}
-.btn_area .close_btn{clear:both;width:100%;}
+.btn_area .btn_box:nth-child(1){float:left}
+.btn_area .btn_box:nth-child(2){float:right}
+.btn_area .btn_box .slide_btn{background:#337ab7;border:0;padding:0 10px;color:#fff}
+.btn_area .close_btn{clear:both;width:100%;margin-top:20px;border:0;background:#337ab7;color:#fff}
