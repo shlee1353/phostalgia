@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 import './css/style.css';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore); 
-const store = createStoreWithMiddleware(reducers);
+const store = createStore(reducers, window.devToolsExtension && window.devToolsExtension());
 console.log(store.getState())
 
 ReactDOM.render(

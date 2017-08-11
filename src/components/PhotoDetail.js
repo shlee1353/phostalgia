@@ -48,9 +48,12 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    closeClick: () => { dispatch(actions.closeDetail())},
+const mapDispatchToProps = (dispatch) => {
+    return {
+         closeClick: () => { dispatch(actions.closeDetail())},
     handleSetWeather: (data) => { dispatch(actions.getWeather())}
-});
+    }
+   
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(PhotoDetail)
